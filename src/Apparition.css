@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Brygada+1918:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Inter:wght@100;200&family=Lato:ital,wght@0,300;0,400;1,300&family=Open+Sans:wght@300;400&family=Poppins:wght@200;400;500&family=Raleway:ital,wght@0,100;0,200;1,100&family=Redressed&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,200&family=Roboto:wght@100;300;400;500&family=Ropa+Sans:ital@0;1&family=Vollkorn:ital,wght@0,600;0,700;1,500;1,600&family=WindSong:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Apparition{
+    background: #0282F9;
+    margin-top: 2.5rem;
+}
+
+.Container{
+    max-width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.Container .H1{
+    max-width: 600px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: .9;
+    margin: 0;
+    padding: 5rem 0;
+    font-weight: 550;
+}
+
+.H1 span{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.Wrapper-apparition{
+    display: flex;
+    padding: 3rem 0;
+}
+
+.Wrapper-apparition .Img{
+    width: 800px;
+    position: relative;
+}
+
+.Wrapper-apparition .Img img{
+    width: 500px;
+    transform: translateX(-00px);
+}
+
+.Wrapper-apparition .Text{
+    max-width: 500px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+@media (max-width:960px){
+    .Container .H1{
+        font-size: 3rem;
+        z-index: 100;
+    }
+    .H1 span{
+        font-size: 2rem;
+        z-index: 100;
+    }
+    .Wrapper-apparition{
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 0;
+        position: relative;
+    }
+    .Wrapper-apparition .Img img{
+        width: 90%;
+        float: right;
+        transform: translateX(200px);
+        transform: translatey(-200px);
+    }
+    .Wrapper-apparition .Text{
+        position: absolute;
+        background: #0282f97a;
+        border-radius: 1rem;
+        padding: 1rem;
+        text-align: left;
+        margin: 0 auto;
+        max-width: 100%;
+        top: 0;
+    }
+}
+@media (max-width:760px){
+    .Container .H1{
+        font-size: 2rem;
+    }
+    .H1 span{
+        font-size: 1.25rem;
+    }
+    .Wrapper-apparition .Text{
+        font-size: 1.5rem;
+    }
+}    
+

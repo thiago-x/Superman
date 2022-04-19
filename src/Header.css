@@ -1,0 +1,98 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Brygada+1918:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Inter:wght@100;200&family=Lato:ital,wght@0,300;0,400;1,300&family=Open+Sans:wght@300;400&family=Poppins:wght@200;400;500&family=Raleway:ital,wght@0,100;0,200;1,100&family=Redressed&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,200&family=Roboto:wght@100;300;400;500&family=Ropa+Sans:ital@0;1&family=Vollkorn:ital,wght@0,600;0,700;1,500;1,600&family=WindSong:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.Header{
+    background: url('./img/banner.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    filter: contrast(1.2);
+}
+
+.Cite{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    max-width: 650px;
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: -2px 2px 5px #0282F9;
+    line-height: .9;
+    position: relative;
+    padding-bottom: 2rem;
+    border-radius: 25px;
+}
+
+.Cite::before{
+    position: absolute;
+    content: '- Superman';
+    font-size: 1.25rem;
+    font-style: italic;
+    bottom: 0;
+    margin-top: 2rem;
+}
+
+.Nav ul{
+    display: flex;
+    padding: 2rem 5rem 2rem 2rem;
+    opacity: 0;
+    transform: translateX(500px);
+    animation: toLeft 1.2s linear forwards;
+}
+
+@keyframes toLeft{
+    from{
+        transform: rotateX();
+    }to{
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}
+
+.Nav ul li + li{
+    margin-left: 1rem;
+}
+
+.Nav ul li a i{
+    font-size: 2rem;
+    color: #fff;
+    transition: .5s linear;
+}
+
+.Nav ul li a i:hover{
+    opacity: .5;
+}
+
+@media (max-width:960px){
+    .Nav ul li a i{
+        font-size: 1.25rem;
+    }
+    .Cite{
+        font-size: 1.5rem;
+    }
+    .Cite::before{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width:760px){
+    .Nav ul{
+        position: absolute;
+        right: 0;
+        padding: 2rem;
+        top: 0;
+    }
+}
